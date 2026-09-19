@@ -1,20 +1,34 @@
-# fik_player
+# fik_player (video_player_fik)
 
-Minimal macOS video player (Flutter + media_kit).
+Легкий відеоплеєр для **macOS** на Flutter + [media_kit](https://pub.dev/packages/media_kit). Зручний для перегляду локальних файлів і папок з плейлистом.
 
-## Features (MVP)
+## Що вміє
 
-- Open file / open folder playlist in a side panel
-- First-frame thumbnails in the playlist
-- Play/pause, scrubber, seek ±5 seconds
-- Subtitle toggle (embedded or sibling `.srt`/`.vtt`/`.ass`)
-- Drag & drop files/folders
-- Register as a video viewer via Finder “Open With”
+- Відкрити **файл** або **папку** (плейлист у бічній панелі)
+- Мініатюри першого кадру в плейлисті
+- Play / pause, скрабер, перемотування **±5 с**
+- Субтитри: вбудовані або поруч із відео (`.srt` / `.vtt` / `.ass`)
+- **Drag & drop** файлів і папок у вікно
+- Реєстрація як переглядач відео через Finder → «Відкрити в програмі»
 
-## Run
+## Гарячі клавіші
+
+| Клавіша | Дія |
+|---|---|
+| `Space` | play / pause |
+| `←` / `→` | −5 с / +5 с |
+| `⌘O` | відкрити файл |
+| `⇧⌘O` | відкрити папку |
+| `⌘L` | плейлист |
+| `⌘S` | субтитри |
+
+## Запуск з коду
 
 ```bash
+flutter pub get
 flutter run -d macos
 ```
 
-Shortcuts: `Space` play/pause, `←`/`→` ±5s, `⌘O` open file, `⇧⌘O` open folder, `⌘L` playlist, `⌘S` subtitles.
+## Стек
+
+Flutter · media_kit · macOS
